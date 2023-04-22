@@ -1,0 +1,422 @@
+body{
+    background-color: rgb(229, 198, 242, 0.5);
+
+    font-family: 'Asap', sans-serif;
+}
+
+.seccion-bienvenida h2{
+    color:blueviolet
+}
+.seccion-bienvenida h1, .seccion-contacto h1, .seccion-album h1, .ubicacion h1, .seccion-integrantes h1{
+    color:  rgb(102, 40, 129); 
+    font-weight: 800;
+}
+
+.imagen1{
+    width: 10.5rem;
+    border-radius: 100%;
+    max-height: 150px;
+    margin: 0 auto;  /*centramos*/
+}
+
+
+.imagen2{
+    width: 11.5rem;
+    border-radius: 100%;
+}
+
+.intro-row1{
+    display: flex;
+    align-items: center;    
+    /*NUEVO*/
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.intro-row2{
+    display: flex;
+    align-items: center;
+    /*NUEVO*/
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+@media (min-width: 1045px){
+    .intro-row2{
+        flex-direction: row-reverse;
+    }
+
+    
+}
+
+.seccion-bienvenida, .seccion-contacto, .seccion-album{
+    margin: 0 auto;
+    width: 65%;
+}
+
+
+p{
+    line-height: 2;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.saludo, .seccion-integrantes{ 
+    height: 250px;
+    padding-top: 100px;
+    font-size: 25px;
+}
+
+.menu a{
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+}
+
+footer{
+    background-color: rgb(206, 134, 210);
+    padding: 50px 0 20px;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+footer a{
+    margin-left: 40px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: #090707;
+}
+
+/*NUEVO*/
+.imagen-description1{
+    width: 72.3%;   
+    margin-left: 20px;
+}
+
+.imagen-description{
+    font-size: 15px; 
+    text-align: justify;
+}
+
+
+.row-integrantes .col-md-4{
+    display: flex;
+    justify-content: center;
+}
+
+/*centramos los elementos del row*/
+.row-integrantes.row{
+    align-items: center;
+}
+
+.row-integrantes2 .col-md-4{
+    display: flex;
+    justify-content: center;
+}
+
+/*centramos los elementos del row*/
+.row-integrantes2.row{
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px){
+    .row-integrantes2.row{
+        flex-direction: row;
+    }
+}
+
+/*NUEVO*/
+.imagen-description2{
+    width: 70%;
+    margin-right: 20px;
+}
+
+.imagen-description1, .imagen-description2{
+    text-align: justify;
+}
+
+
+
+.bts-logo-imagen{
+    width: 5rem;
+}
+
+#header-seccion{
+    display: flex;
+    justify-content: space-between;
+    background-color:  rgba(192, 79, 240, 0.5);
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    padding-left: 20px;
+
+}
+
+nav{
+    padding-right: 60px;
+
+}
+
+
+/* Seccion contacto */
+
+
+.saludo-contacto, .titulo-album{ 
+    padding-top: 100px;
+    font-size: 25px;
+}
+
+.ubicacion{
+    padding-top: 2rem;
+    margin: 0 auto;
+    width: 65%;
+}
+
+/* Seccion discografia */
+
+.card{
+    background-color: rgb(196, 193, 193);
+    max-width: 80%;
+    height: 100%;
+}
+
+.card img{
+    width:100%;
+}
+
+
+.card-principal{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+@media (min-width: 600px){
+    .card-principal{
+        display: grid;
+        grid-template-areas: 
+                        "card1 card2"
+                        "card3 card4"
+                        "card5 card6"
+                        "card7 card8"
+                        "card9 card10"
+                        "card11 card12";
+        gap: 15px
+    }
+
+    .card1{
+        grid-area: card1;
+    }
+
+    .card2{
+        grid-area: card2;
+    }
+
+    .card3{
+        grid-area: card3;
+    }
+
+    .card4{
+        grid-area: card4;
+    }
+
+    .card5{
+        grid-area: card5;
+    }
+
+    .card6{
+        grid-area: card6;
+    }
+
+    .card7{
+        grid-area: card7;
+    }
+
+    .card8{
+        grid-area: card8;
+    }
+
+    .card9{
+        grid-area: card9;
+    }
+
+    .card10{
+        grid-area: card10;
+    }
+
+    .card11{
+        grid-area: card11;
+    }
+
+    .card12{
+        grid-area: card12;
+    }
+
+    .card{
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+    .card-principal{
+        display: grid;
+        grid-template-areas: 
+                        "card1 card2 card3"
+                        "card4 card5 card6"
+                        "card7 card8 card9"
+                        "card10 card11 card12";
+        gap: 15px
+    }
+}
+
+
+
+@media (min-width: 990px){
+    .card-principal{
+        display: grid;
+        grid-template-areas: 
+                        "card1 card2 card3 card4"
+                        "card5 card6 card7 card8"
+                        "card9 card10 card11 card12";
+        gap: 15px
+    }
+
+}
+
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.historia img{
+    width: 80%;
+}
+
+a .fa-brands{
+    font-size: 24px;
+}
+  
+.nav-item{
+    padding: 0 10px;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+} 
+
+
+.menu li .pagina-actual{
+    position: relative;
+    bottom: 8%;
+    color: white !important;
+    font-size: 23px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar{
+    width: 100%;
+}    
+
+  .icon{
+    color: #e335a6;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-box .icon:hover{
+    color: #48d4f4 !important;
+  }
+
+  #features{
+    position: relative;
+  }
+
+  .container-fluid{
+    padding: 7% 15% 3%;
+
+  }
+
+  .feature-box{
+    text-align: center;
+  }
+
+
+  hr {
+       /* border-width: 20px; */
+       border: dotted #a522ab 10px;
+       /* border-style: dotted; */
+       border-bottom: none;
+       width: 4%;
+       margin: 0px auto;
+       margin-top: 50px;
+       /* border-color: black; */
+       background-color: transparent;
+}
+
+
+
+.row-integrantes .col-md-8 h5{
+    margin-top: 20px;
+}
+
+@media (min-width: 768px){
+    .row-integrantes .col-md-8 h5, .row-integrantes2 .col-md-8 h5{
+        margin-top: 30px;
+    }
+}
+
+.row-integrantes2 .col-md-8 h5{
+    margin-top: 20px;
+}
+
+
+/*css destinado a los botones de anterior del carrusel*/
+.prev-icon{
+    position: relative;
+    right: 60px;
+    color: #a522ab;
+    font-size: 30px;
+}
+
+.next-icon{
+    position: relative;
+    left: 60px;
+    color: #a522ab;
+    font-size: 30px;
+}
+
+
+@media (min-width: 992px){
+    .prev-icon{
+        right: 90px;
+    }
+    
+    .next-icon{
+        left: 90px;
+    }
+}
+
+
+.carousel {
+    z-index: -1;
+}
