@@ -428,3 +428,7 @@ a .fa-brands, a .fa{
         height: 150px;
     }
 }
+
+.carousel-control-prev, .carousel-control-next{
+    z-index: 0;
+}
