@@ -39,7 +39,7 @@ body{
     align-items: center;
     /*NUEVO*/
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     margin: 60px 0;
 }
 
