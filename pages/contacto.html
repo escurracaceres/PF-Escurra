@@ -43,19 +43,19 @@
                     </li>
     
                     <li class='nav-item'>
-                        <a class='nav-link ' href="seccion2.html">Integrantes</a>
+                        <a class='nav-link ' href="integrantes.html">Integrantes</a>
                     </li>
     
                     <li class='nav-item'>
-                        <a class='nav-link ' href="seccion3.html">Discografia</a>
+                        <a class='nav-link ' href="discografica.html">Discografia</a>
                     </li>
     
                     <li class='nav-item'>
-                        <a class='nav-link ' href="seccion4.html">Historia</a>
+                        <a class='nav-link ' href="historia.html">Historia</a>
                     </li>
     
                     <li class='nav-item'>
-                        <a class='nav-link pagina-actual' href="seccion5.html">Contactos</a>
+                        <a class='nav-link pagina-actual' href="contacto.html">Contactos</a>
                     </li>
                 </ul>
             </div>
@@ -66,30 +66,48 @@
         
         <section class="seccion-contacto">
             <div class="saludo-contacto">
-                <h1>Contactanos</h1>
+                <h1 class='h1-contacto'>Contactanos</h1>
                 
             </div>
             
             
-            <form action="">
-                <label for="nombre">Nombre y Apellido</label>
-                <input type="text" name="" id="nombre"
-                placeholder="ingrese el nombre" required><br>
+            <form action="" id="formulario-contacto">
+                <div class="nombre-apellido">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" name="" id="nombre"
+                    placeholder="ingrese el nombre" required>
+                </div>
 
-                <label for="correo">Correo electronico</label>
-                <input type="email" name="" id="correo"><br>
+                <div class="correo">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" name="" id="correo"
+                    placeholder="ejemplo@gmail.com"
+                    required>
+                </div>
 
-                <label for="telefono">Numero de telefono</label>
-                <input type="tel" name="" id="telefono"><br>
+                <div class="numero-telefono">
+                    <label for="telefono">Numero de telefono</label>
+                    <input type="tel" name="" id="telefono" required
+                    placeholder="09xx-xxx-xxx">
+                </div>
 
-                <label for="dni">DNI</label>
-                <input type="number" name="" id="dni"><br>
+                <div class="dni">
+                    <label for="dni">DNI</label>
+                    <input type="number" name="" id="dni" required
+                    placeholder="numero de identificacion personal">
+                </div>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea name="" id="mensaje" cols="30" rows="10"></textarea><br>
+                <div class="mensaje-form">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="" id="mensaje" cols="30" rows="10"
+                        required
+                        placeholder="deje su mensaje aqui"></textarea>
+                </div>
 
-                <input type="submit" value="Enviar formulario">
-                <input type="reset" value="Limpiar formulario">
+                <div class="botones-formulario">
+                    <input type="submit" value="Enviar formulario" id="btn-enviar">
+                    <input type="reset" value="Limpiar formulario" id="btn-limpiar-formulario">
+                </div>
             </form>
         </SEction>
     </main>  
@@ -97,7 +115,7 @@
     <section class="ubicacion">
         <h1>Nos encontramos en</h1>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4607.584495966773!2d-57.14643040921307!3d-25.38433041873978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945c32f8a18019d1%3A0xc81a1185bc4fb6fd!2zQ2FhY3Vww6k!5e0!3m2!1ses!2spy!4v1680371092912!5m2!1ses!2spy"
-         width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+          allowfullscreen="" loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade"></iframe>
         
     </section>

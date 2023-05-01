@@ -188,7 +188,6 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: -1;
 }
 
 @media (min-width: 600px) {
