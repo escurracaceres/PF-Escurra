@@ -1,0 +1,19 @@
+{
+  "name": "preentrega2-escurra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escurracaceres/PreEntrega2-Escurra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escurracaceres/PreEntrega2-Escurra/issues"
+  },
+  "homepage": "https://github.com/escurracaceres/PreEntrega2-Escurra#readme"
+}
