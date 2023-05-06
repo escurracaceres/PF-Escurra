@@ -1,0 +1,115 @@
+
+.seccion-principal h2{
+    color:blueviolet
+}
+
+.saludo{ 
+    height: 250px;
+    padding-top: 100px;
+    font-size: 25px;
+}
+
+
+.intro{
+    .intro-row1{
+        display: flex;
+        align-items: center;    
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 60px 0;
+
+        .imagen1{
+            @extend .imagen-integrante
+        }
+        
+        .imagen-description1{
+            width: 74.3%;
+            text-align: justify;
+        }
+    }
+    
+    .intro-row2{
+        @include flex-columna;
+        justify-content: space-around;
+        margin: 60px 0;
+
+        .imagen2{
+            width: 11.5rem;
+            border-radius: 100%;
+        }
+
+        .imagen-description2{
+            width: 70%;
+            text-align: justify;
+        }
+    }
+}
+
+@media (min-width: $desktop){
+    .intro{
+        .intro-row2{
+            flex-direction: row-reverse;
+
+            .imagen-description2{
+                margin-right: 20px;
+            }
+        }
+    
+        .intro-row1{
+            flex-wrap: nowrap;
+
+            .imagen-description1{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+
+#features{
+    position: relative;
+
+    .container-fluid{
+        padding: 7% 15% 3%;
+    
+        .feature-box{
+            text-align: center;
+            margin-bottom: 1.5rem;
+
+            .icon{
+                color: #e335a6;
+                margin-bottom: 1rem;
+
+                &:hover{
+                    color: #48d4f4 ;
+                }
+            }
+
+            p{
+                width: 75%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet){
+    #features{
+        .container-fluid{
+            .feature-box{
+                p{
+                    width: 100%;
+                }
+            }
+        }}
+}
+
+hr {
+    border: dotted #a522ab 10px;
+    border-bottom: none;
+    width: 4%;
+    margin: 0px auto;
+    margin-top: 50px;
+    background-color: transparent;
+}
+

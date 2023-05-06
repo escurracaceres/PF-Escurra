@@ -1,0 +1,54 @@
+.historia{
+    @include flex-columna;
+    text-align: justify;
+}
+
+.historia img{
+    width: 80%;
+}
+
+
+
+.historia-video iframe{
+    width: 250px;
+    height: 150px;
+}
+
+@media (min-width: 600px){
+    .historia-video iframe{
+        width: 250px;
+        height: 150px;
+    }
+}
+
+
+/*css destinado a los botones de anterior del carrusel*/
+.prev-icon{
+    position: relative;
+    right: 60px;
+    color: #a522ab;
+    font-size: 30px;
+}
+
+.next-icon{
+    position: relative;
+    left: 60px;
+    color: #a522ab;
+    font-size: 30px;
+}
+
+
+@media (min-width: $desktop){
+    .prev-icon{
+        right: 90px;
+    }
+    
+    .next-icon{
+        left: 90px;
+    }
+}
+
+
+.carousel-control-prev, .carousel-control-next{
+    z-index: 0;
+}

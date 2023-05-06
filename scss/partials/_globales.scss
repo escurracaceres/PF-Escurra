@@ -1,0 +1,118 @@
+body{
+    font-family: $fuente-principal;
+    background-color: $color-primario;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    a{
+        font-family: $fuente-nav;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+
+/*Header y navbar*/
+.navbar-dark{
+    .navbar-nav{
+        .nav-link {
+            color: $color-nav;
+        }
+    }
+}
+
+#header-seccion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgba(192, 79, 240, 0.5);
+    position: fixed;
+    width: 100%;
+    padding-left: 20px;
+    z-index: 1;
+
+    .navbar{
+        width: 100%;
+    }
+
+    nav{
+        padding-right: 60px;
+    }
+
+    .nav-item{
+        padding: 0 10px;
+    }
+    
+    .nav-link{
+        font-size: 1.2rem;
+    }
+
+    .menu li .pagina-actual{
+        position: relative;
+        bottom: 8%;
+        color: white !important;
+        font-size: 23px;
+    }
+}
+
+
+.bts-logo-imagen{
+    width: 5rem;
+}
+
+
+.seccion-principal{
+    margin: 0 auto;
+    width: 65%;
+}
+
+/*color para todos los h1*/
+.seccion-principal h1{
+    color: $color-secundario; 
+    font-weight: $grosor-h1;
+}
+
+p {
+    line-height: 2;
+}
+
+
+/*FOOTER*/
+footer{
+    background-color: $color-footer;
+    padding: 50px 0 20px;
+    text-align: center;
+    margin-top: 3.5rem;
+
+    a{
+        margin-left: 40px;
+        margin-right: 40px;
+        text-decoration: none;
+        color: $color-footer-icono;
+    }
+
+    a .fa-brands, a .fa{
+        font-size: 24px;
+    }
+}
+
+
+/*usaremos EXTEND mas adelante*/
+.imagen-integrante{
+    width: 10.5rem;
+    border-radius: 100%;
+    max-height: 150px;
+    margin: 0 auto;  /*centramos*/
+}
+
+
+.titulo-principal{ 
+    padding-top: 120px;
+    padding-bottom: 30px;
+    font-size: 25px;
+}
