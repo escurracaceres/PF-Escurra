@@ -9,9 +9,8 @@
     <!--bootstrap css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
+    <!--css propio-->
     <link rel="stylesheet" href="css/styles.css">
-    <title>Home</title>
 
     <!--font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +20,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,400;0,500;0,700;0,800;1,600;1,700&family=Oswald:wght@200;300;400;500;600&display=swap" 
     rel="stylesheet">
 
-
     <!--fontawasome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <!--Libreria de animaciones AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!--titulo-->
+    <title>BTS | Integrantes</title>
 </head>
 <body>
     
@@ -85,9 +91,9 @@
             
             <div class="intro">
                 <div class="intro-row1">
-                  <img class="imagen1" src="img/imagenbts1.png" alt="no se encuentra la imagen">
+                  <img data-aos="zoom-in-right" class="imagen1" src="img/imagenbts1.png" alt="no se encuentra la imagen">
 
-                  <p class="imagen-description1">BTS grupo originario de Corea del Sur, BTS  debutó 
+                  <p data-aos="zoom-in-left" class="imagen-description1">BTS grupo originario de Corea del Sur, BTS  debutó 
                     el 13 de Junio de 2013,y en Japón el 04 de Junio del 2014, 
                     formado por su agencia Big Hit Entertainment; 
                     conformado por 7 miembros: Kim Namjoon (RM),
@@ -97,10 +103,10 @@
                 </div>
 
                 <div class="intro-row2">
-                  <img class="imagen2" src="img/imagenbts2.png" alt="no se encuentra la imagen">
+                  <img data-aos="zoom-in-left" class="imagen2" src="img/imagenbts2.png" alt="no se encuentra la imagen">
 
                 
-                  <p class="imagen-description2">POR QUE NOS LLAMAMOS A.R.M.Y?
+                  <p data-aos="zoom-in-right" class="imagen-description2">POR QUE NOS LLAMAMOS A.R.M.Y?
 
                     El nombre se debe a "Adorable Reprensentative M.C for Youth" que en ingles, las siglas significan "Ejercito" 
                     y para ellos nosotros somos eso, 
@@ -108,10 +114,10 @@
                 </div>
 
                 <div class="intro-row1">
-                    <img class="imagen1" src="img/grupal.png" alt="no se encuentra la imagen">
+                    <img data-aos="zoom-in-right" class="imagen1" src="img/grupal.png" alt="no se encuentra la imagen">
   
                   
-                    <p class="imagen-description1">
+                    <p data-aos="zoom-in-left" class="imagen-description1">
                         Fue el 05 de Agosto,cuando el canal de BH lanzó el comeback trailer; el 07 de Agosto,la compañía dio a 
                         conocer las fotos del teaser álbum. El 19 de Agosto el MV "DANGER" fue lanzado al mismo tiempo que el álbum.
                     </p>
@@ -128,19 +134,19 @@
         <div class="container-fluid">
           <div class="row">
             <div class="feature-box col-md-4">
-              <i class="icon fas fa-circle-check fa-4x"></i>
+              <i data-aos="zoom-in-right" class="icon fas fa-circle-check fa-4x"></i>
               <h3 class='feature-title'>Soñar</h3>
               <p>Me duele la espalda por dejar crecer mis alas.</p>
             </div>
     
             <div class="feature-box col-md-4">
-              <i class="icon fa-solid fa-bullseye fa-4x"></i>
+              <i data-aos="zoom-in-down" class="icon fa-solid fa-bullseye fa-4x"></i>
               <h3 class='feature-title'>Creer</h3>
               <p>Tus inicios serán humildes, pero tu futuro será próspero..</p>
             </div>
     
             <div class="feature-box col-md-4">
-              <i class="icon fa-solid fa-heart fa-4x"></i>
+              <i data-aos="zoom-in-left" class="icon fa-solid fa-heart fa-4x"></i>
               <h3 class='feature-title'>Amar</h3>
               <p>El amor florece como los cerezos, pero arde y se convierte en cenizas.</p>
             </div>
@@ -165,6 +171,10 @@
         </p>
     </footer>
 </body>
+
+<!--Script de libreria de animaciones AOS-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script> AOS.init();</script>
 
 <!--Boostrap js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

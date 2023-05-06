@@ -6,7 +6,7 @@
 /*MIXINS*/
 body {
   font-family: "Asap", sans-serif;
-  background-color: rgba(229, 198, 242, 0.5019607843);
+  background-image: linear-gradient(to bottom, #8acbe9, pink);
 }
 
 .menu {
@@ -29,7 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(192, 79, 240, 0.5);
+  background-color: rgba(192, 79, 240, 0.5019607843);
   position: fixed;
   width: 100%;
   padding-left: 20px;

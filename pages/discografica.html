@@ -8,9 +8,8 @@
    <!--bootstrap css-->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
+   <!--css propio-->
    <link rel="stylesheet" href="../css/styles.css">
-   <title>Discografia</title>
 
    <!--font -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,15 +19,22 @@
    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,400;0,500;0,700;0,800;1,600;1,700&family=Oswald:wght@200;300;400;500;600&display=swap" 
    rel="stylesheet">
 
-
    <!--fontawasome-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
    <!--favicon-->
    <link rel="shortcut icon" href="../img/favicon.ico">
+
+   <!--Libreria de animaciones AOS-->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <!--titulo-->
+   <title>BTS | Discografia</title>
 </head>
 <body>
-    <div id="grilla">
+    <div id="grilla" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1000">
         <header id="header-seccion">
             <nav class='navbar navbar-expand-md navbar-dark'>
                 <div class="bts-logo">
@@ -208,6 +214,10 @@
     </div>
    
 </body>
+
+<!--Script de libreria de animaciones AOS-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script> AOS.init();</script>
 
 <!--Boostrap js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
