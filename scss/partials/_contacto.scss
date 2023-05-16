@@ -61,7 +61,7 @@ form{
     }
   
     input[type="submit"]{
-          background-color: #007bff;
+          background-color: $color-secundario;
           color: #fff;
           border: none;
           padding: 10px 20px;
@@ -93,116 +93,120 @@ form{
       #btn-limpiar-formulario{
           width: 100%;
       }
-  }
+}
   
-  @media (min-width: $tablet){
-    form{
-        .nombre-apellido {
-            @include campo-formulario('#nombre');
-        }
-  
-        .correo{
-            @include campo-formulario('#correo');
-        }
-        
-        .numero-telefono{
-            @include campo-formulario('#telefono');
-        }
-        
-        .dni{
-            @include campo-formulario('#dni');
-        }
-        
-        .mensaje-form{
-            @include campo-formulario('#mensaje');
-        }
+@media (min-width: $tablet){
+form{
+    .nombre-apellido {
+        @include campo-formulario('#nombre');
+    }
 
-        .botones-formulario{
-            flex-direction: row;
-            margin: 15px auto 75px;
-            width: 90%;
-            row-gap: 0px;
-        }
-
-        #btn-enviar{
-            width: 45%;
-            margin-left: 0;
-        }
+    .correo{
+        @include campo-formulario('#correo');
+    }
     
-        #btn-limpiar-formulario{
-            width: 45%;
-            margin-bottom: 0px;
+    .numero-telefono{
+        @include campo-formulario('#telefono');
+    }
+    
+    .dni{
+        @include campo-formulario('#dni');
+    }
+    
+    .mensaje-form{
+        @include campo-formulario('#mensaje');
+    }
+
+    .botones-formulario{
+        flex-direction: row;
+        margin: 15px auto 75px;
+        width: 90%;
+        row-gap: 0px;
+    }
+
+    #btn-enviar{
+        width: 45%;
+        margin-left: 0;
+    }
+
+    #btn-limpiar-formulario{
+        width: 45%;
+        margin-bottom: 0px;
+    }
+}
+}
+
+
+.h1-contacto{
+    margin-left: 4rem;
+}
+
+
+.ubicacion{
+    iframe{
+        width:200px;
+        height: 180px;
+        border:0;
+    }
+
+    h1{
+        color: $color-secundario;
+    }
+}
+
+
+/*Media queries para el tamaño del mapa de ubicacion en Contactos.html*/
+@media (min-width: 400px){
+    .ubicacion{
+        iframe{
+            width:280px;
+            height: 250px;
         }
     }
-  }
-  
-  
-  .h1-contacto{
-      margin-left: 4rem;
-  }
-  
-  
-  .ubicacion{
-      iframe{
-          width:200px;
-          height: 180px;
-          border:0;
-      }
-  }
-  
-  
-  /*Media queries para el tamaño del mapa de ubicacion en Contactos.html*/
-  @media (min-width: 400px){
-      .ubicacion{
-          iframe{
-              width:280px;
-              height: 250px;
-          }
-      }
-  }
-  
-  @media (min-width: 600px){
-      .ubicacion{
-          iframe{
-              width:320px;
-              height: 250px;
-          }
-      }
-  }
-  
-  @media (min-width: $tablet){
-      .ubicacion{
-          iframe{
-              width:450px;
-              height: 250px;
-          }
-      }
-  }
-  
-  @media (min-width: $desktop){
-      .ubicacion{
-          iframe{
-              width:500px;
-              height: 400px;
-          }
-      }
-  }
-  
-  /*Se agrega un hove a los cards para agrandar las imagenes con un scale()*/
-  .card:hover {
-      transform: scale(1.05);
-      box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
 
-      /*Brillo a la imagen de 50% cuando el mouse este encima de el*/
-      img {
-        filter: brightness(50%);
-      }
-    }
-
-
+@media (min-width: 600px){
     .ubicacion{
-        padding-top: 2rem;
-        margin: 0 auto;
-        width: 65%;
+        iframe{
+            width:320px;
+            height: 250px;
+        }
     }
+}
+
+@media (min-width: $tablet){
+    .ubicacion{
+        iframe{
+            width:450px;
+            height: 250px;
+        }
+    }
+}
+
+@media (min-width: $desktop){
+    .ubicacion{
+        iframe{
+            width:500px;
+            height: 400px;
+        }
+    }
+}
+
+/*Se agrega un hove a los cards para agrandar las imagenes con un scale()*/
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+
+    /*Brillo a la imagen de 50% cuando el mouse este encima de el*/
+    img {
+        filter: brightness(50%);
+    }
+}
+
+
+.ubicacion{
+    padding-top: 2rem;
+    margin: 0 auto;
+    width: 65%;
+}
     

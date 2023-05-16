@@ -1,54 +1,131 @@
-.historia{
-    @include flex-columna;
-    text-align: justify;
-}
 
-.historia img{
-    width: 80%;
-}
+.seccion-principal{
+    .historia{
+        @include flex-columna;
+        text-align: justify;
+    
+        img{
+            width: 80%;
+        }
+    
+        .historia-texto{
+            #carouselExampleControls{
+                .carousel-control-prev{
+                    z-index: 0;
+    
+                    /*css destinado el boton anterior del carrusel*/
+                    .prev-icon{
+                        @include pre-icon-next-icon;
+                        right: 50px;
+                    }
+    
+                }            
+    
+                .carousel-control-next{
+                    z-index: 0;
+    
+                    /*css destinado el boton siguiente del carrusel*/
+                    .next-icon{
+                        @include pre-icon-next-icon;
+                        left: 50px;
+                    }
+                }            
+            }
+        }
+    }
 
 
-
-.historia-video iframe{
-    width: 250px;
-    height: 150px;
-}
-
-@media (min-width: 600px){
-    .historia-video iframe{
-        width: 250px;
-        height: 150px;
+    
+    .historia-video{
+        iframe{
+            width: 200px;
+            height: 150px;
+        }
     }
 }
 
 
-/*css destinado a los botones de anterior del carrusel*/
-.prev-icon{
-    position: relative;
-    right: 60px;
-    color: #a522ab;
-    font-size: 30px;
+
+
+
+@media (min-width: $mobile){
+    .seccion-principal{
+        .historia{
+            .historia-texto{
+                #carouselExampleControls{
+                    .carousel-control-prev{
+                        .prev-icon{
+                            right: 65px;
+                        }
+                    }
+
+                    .carousel-control-next{
+                        .next-icon{
+                            left: 65px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .historia-video{
+            iframe{
+                width: 350px;
+                height: 200px;
+            }
+        }
+    }
 }
 
-.next-icon{
-    position: relative;
-    left: 60px;
-    color: #a522ab;
-    font-size: 30px;
+@media (min-width: $tablet){
+    .seccion-principal{
+        .historia{
+            .historia-texto{
+                #carouselExampleControls{
+                    .carousel-control-prev{
+                        .prev-icon{
+                            right: 90px;
+                        }
+                    }
+
+                    .carousel-control-next{
+                        .next-icon{
+                            left: 90px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .historia-video{
+            iframe{
+                width: 450px;
+                height: 250px;
+            }
+        }
+    }
 }
+
 
 
 @media (min-width: $desktop){
-    .prev-icon{
-        right: 90px;
-    }
-    
-    .next-icon{
-        left: 90px;
-    }
-}
+    .seccion-principal{
+        .historia{
+            .historia-texto{
+                #carouselExampleControls{
+                    .carousel-control-prev{
+                        .prev-icon{
+                            right: 110px;
+                        }
+                    }
 
-
-.carousel-control-prev, .carousel-control-next{
-    z-index: 0;
+                    .carousel-control-next{
+                        .next-icon{
+                            left: 110px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

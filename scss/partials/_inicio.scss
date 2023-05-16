@@ -7,6 +7,13 @@
     height: 250px;
     padding-top: 100px;
     font-size: 25px;
+    padding-left: 7%;
+}
+
+@media (min-width: $desktop){
+    .saludo{
+        padding-left: 3%;
+    }
 }
 
 

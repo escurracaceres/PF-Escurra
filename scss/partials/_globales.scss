@@ -28,9 +28,11 @@ body{
 }
 
 #header-seccion{
-    display: flex;
+    @include flex-fila-centrado;
+    // display: flex;
+    // align-items: center;
+
     justify-content: space-between;
-    align-items: center;
     background-color:  $color-header;
     position: fixed;
     width: 100%;
@@ -64,6 +66,7 @@ body{
 
 .bts-logo-imagen{
     width: 5rem;
+    border-radius: 7px;
 }
 
 
