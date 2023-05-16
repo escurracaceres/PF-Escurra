@@ -192,13 +192,39 @@ input[type=radio] {
     display: grid;
 }
 
+@media (min-width: $tablet) and (max-width: 990px) {
+    #filtro-nuevos:checked ~ .card-principal{
+        grid-template-areas: 
+                        "card1 . card2"
+                        "card3 . card4"
+                        ". . ."
+                        ". . .";
+    }
+
+    #filtro-populares:checked ~ .card-principal{
+        grid-template-areas: 
+                        "card5 . card6"
+                        "card7 . card8"
+                        ". . ."
+                        ". . .";
+    }
+
+    #filtro-viejos:checked ~ .card-principal{
+        grid-template-areas: 
+                        "card9 . card10"
+                        "card11 . card12"
+                        ". . ."
+                        ". . .";
+    }
+}
+
 #filtro-populares:checked ~ .card-principal .mas-nuevo, .card-principal .mas-viejo{
     display: none;
 }
 
 //se selecciona el filtro "mas viejos"
 #filtro-viejos:checked ~ .card-principal .mas-viejo{
-    display: grid;
+    display: block;
 }
 
 #filtro-viejos:checked ~ .card-principal .mas-nuevo, .card-principal .mas-popular{
