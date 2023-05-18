@@ -214,10 +214,19 @@ hr {
   max-width: 80%;
   height: 100%;
   border-radius: 7px;
+  /*Se agrega un hove a los cards para agrandar las imagenes con un scale()*/
 }
 .card-principal .card img {
   width: 100%;
   border-radius: 7px;
+}
+.card-principal .card:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+  /*Brillo a la imagen de 50% cuando el mouse este encima de el*/
+}
+.card-principal .card:hover img {
+  filter: brightness(50%);
 }
 
 @media (min-width: 600px) {
@@ -672,16 +681,6 @@ form #btn-limpiar-formulario {
     height: 400px;
   }
 }
-/*Se agrega un hove a los cards para agrandar las imagenes con un scale()*/
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-  /*Brillo a la imagen de 50% cuando el mouse este encima de el*/
-}
-.card:hover img {
-  filter: brightness(50%);
-}
-
 .ubicacion {
   padding-top: 2rem;
   margin: 0 auto;
