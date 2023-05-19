@@ -201,7 +201,7 @@ hr {
 }
 
 /* Seccion discografia */
-.card-principal {
+.seccion-principal .card-principal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,31 +209,86 @@ hr {
   justify-content: center;
   position: relative;
 }
-.card-principal .card {
+.seccion-principal .card-principal .card {
   background-color: rgb(196, 193, 193);
   max-width: 80%;
   height: 100%;
   border-radius: 7px;
   /*Se agrega un hove a los cards para agrandar las imagenes con un scale()*/
 }
-.card-principal .card img {
+.seccion-principal .card-principal .card img {
   width: 100%;
   border-radius: 7px;
 }
-.card-principal .card:hover {
+.seccion-principal .card-principal .card:hover {
   transform: scale(1.05);
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   /*Brillo a la imagen de 50% cuando el mouse este encima de el*/
 }
-.card-principal .card:hover img {
+.seccion-principal .card-principal .card:hover img {
   filter: brightness(50%);
+}
+.seccion-principal #filtro-nuevos:checked ~ .filtro-contenedor label[for=filtro-nuevos],
+.seccion-principal #filtro-populares:checked ~ .filtro-contenedor label[for=filtro-populares],
+.seccion-principal #filtro-viejos:checked ~ .filtro-contenedor label[for=filtro-viejos],
+.seccion-principal #filtro-todos:checked ~ .filtro-contenedor label[for=filtro-todos] {
+  background-color: rgb(236, 108, 129); /* rosa */
+}
+.seccion-principal #filtro-todos:checked ~ .card-principal .card {
+  display: grid;
+}
+.seccion-principal #filtro-nuevos:checked ~ .card-principal .mas-nuevo {
+  display: grid;
+}
+.seccion-principal #filtro-nuevos:checked ~ .card-principal .mas-popular, .seccion-principal .card-principal .mas-viejo {
+  display: none;
+}
+.seccion-principal #filtro-populares:checked ~ .card-principal .mas-popular {
+  display: grid;
+}
+.seccion-principal #filtro-populares:checked ~ .card-principal .mas-nuevo, .seccion-principal .card-principal .mas-viejo {
+  display: none;
+}
+.seccion-principal #filtro-viejos:checked ~ .card-principal .mas-viejo {
+  display: block;
+}
+.seccion-principal #filtro-viejos:checked ~ .card-principal .mas-nuevo, .seccion-principal .card-principal .mas-popular {
+  display: none;
+}
+.seccion-principal .filtro-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.seccion-principal .filtro-contenedor label {
+  text-align: center;
+  padding-top: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #662881;
+  border-radius: 10px;
+  height: 30px;
+  width: 150px;
+  color: white;
+  margin-bottom: 5px;
+}
+.seccion-principal .filtro-contenedor label:hover {
+  opacity: 0.7;
+}
+.seccion-principal input[type=radio] {
+  display: none;
 }
 
 @media (min-width: 600px) {
-  .card-principal {
+  .seccion-principal .card-principal {
     display: grid;
     grid-template-areas: "card1 card2" "card3 card4" "card5 card6" "card7 card8" "card9 card10" "card11 card12";
     gap: 15px;
+  }
+  .seccion-principal .card-principal .card {
+    max-width: 100%;
   }
   .card1 {
     grid-area: card1;
@@ -271,112 +326,47 @@ hr {
   .card12 {
     grid-area: card12;
   }
-  .card-principal .card {
-    max-width: 100%;
-  }
 }
 @media (min-width: 768px) {
-  .card-principal {
+  .seccion-principal .card-principal {
     grid-template-areas: "card1 card2 card3" "card4 card5 card6" "card7 card8 card9" "card10 card11 card12";
   }
 }
 @media (min-width: 990px) {
-  .card-principal {
+  .seccion-principal .card-principal {
     grid-template-areas: "card1 card2 card3 card4" "card5 card6 card7 card8" "card9 card10 card11 card12";
   }
 }
-.filtro-contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-.filtro-contenedor label {
-  text-align: center;
-  padding-top: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #662881;
-  border-radius: 10px;
-  height: 30px;
-  width: 150px;
-  color: white;
-  margin-bottom: 5px;
-}
-.filtro-contenedor label:hover {
-  opacity: 0.7;
-}
-
-input[type=radio] {
-  display: none;
-}
-
 @media (min-width: 576px) {
-  .filtro-contenedor {
+  .seccion-principal .filtro-contenedor {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
     margin-bottom: 20px;
     justify-content: space-around;
   }
-  .filtro-contenedor label {
+  .seccion-principal .filtro-contenedor label {
     width: 180px;
     height: 35px;
     padding-top: 5px;
   }
 }
 @media (min-width: 768px) {
-  .filtro-contenedor label {
+  .seccion-principal .filtro-contenedor label {
     width: 120px;
   }
 }
-#filtro-nuevos:checked ~ .filtro-contenedor label[for=filtro-nuevos],
-#filtro-populares:checked ~ .filtro-contenedor label[for=filtro-populares],
-#filtro-viejos:checked ~ .filtro-contenedor label[for=filtro-viejos],
-#filtro-todos:checked ~ .filtro-contenedor label[for=filtro-todos] {
-  background-color: rgb(236, 108, 129); /* rosa */
-}
-
-#filtro-todos:checked ~ .card-principal .card {
-  display: grid;
-}
-
-#filtro-nuevos:checked ~ .card-principal .mas-nuevo {
-  display: grid;
-}
-
-#filtro-nuevos:checked ~ .card-principal .mas-popular, .card-principal .mas-viejo {
-  display: none;
-}
-
-#filtro-populares:checked ~ .card-principal .mas-popular {
-  display: grid;
-}
-
 @media (min-width: 768px) and (max-width: 990px) {
-  #filtro-nuevos:checked ~ .card-principal {
+  .seccion-principal #filtro-nuevos:checked ~ .card-principal {
     grid-template-areas: "card1 . card2" "card3 . card4" ". . ." ". . .";
   }
-  #filtro-populares:checked ~ .card-principal {
+  .seccion-principal #filtro-populares:checked ~ .card-principal {
     grid-template-areas: "card5 . card6" "card7 . card8" ". . ." ". . .";
   }
-  #filtro-viejos:checked ~ .card-principal {
+  .seccion-principal #filtro-viejos:checked ~ .card-principal {
     grid-template-areas: "card9 . card10" "card11 . card12" ". . ." ". . .";
   }
 }
-#filtro-populares:checked ~ .card-principal .mas-nuevo, .card-principal .mas-viejo {
-  display: none;
-}
-
-#filtro-viejos:checked ~ .card-principal .mas-viejo {
-  display: block;
-}
-
-#filtro-viejos:checked ~ .card-principal .mas-nuevo, .card-principal .mas-popular {
-  display: none;
-}
-
 .seccion-principal {
   /*centramos los elementos del row*/
   /*centramos los elementos del row*/
